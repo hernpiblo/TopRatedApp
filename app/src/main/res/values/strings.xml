@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Project</string>
+    <string name="top_rated">Top Rated</string>
+    <string name="email">Email</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="remember_me">Remember me</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="create_account">Create account</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="name">Name</string>
+    <string name="create_your_account">Create your account</string>
+    <string name="password_mismatch">Password mismatch</string>
+    <string name="back_button">Back</string>
+    <string name="error_icon">Error Icon</string>
 </resources>
