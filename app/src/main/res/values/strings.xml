@@ -13,4 +13,14 @@
     <string name="password_mismatch">Password mismatch</string>
     <string name="back_button">Back</string>
     <string name="error_icon">Error Icon</string>
+    <string name="best_overall">Best Overall</string>
+    <string name="highest_rated">Highest Rated</string>
+    <string name="most_reviews">Most Reviews</string>
+    <string name="my_saved_places">My Saved Places</string>
+    <string name="search">Search</string>
+    <string name="e_g_new_york_city">e.g. New York City</string>
+    <string name="search_location_to_obtain_places">Search location to obtain places</string>
+    <string name="no_name">No Name</string>
+    <string name="no_address">No Address</string>
+    <string name="image_of_place">Image of place</string>
 </resources>

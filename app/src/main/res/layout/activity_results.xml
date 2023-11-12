@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultsActivity">
+
+    <TextView
+        android:id="@+id/staticText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="34dp"
+        android:text="Places in"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/queryText"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:text="QUERY"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toStartOf="@+id/savedBtn"
+        app:layout_constraintStart_toStartOf="@+id/staticText3"
+        app:layout_constraintTop_toBottomOf="@+id/staticText3" />
+
+    <Button
+        android:id="@+id/savedBtn"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="28dp"
+        android:backgroundTint="@color/colorAccent"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:paddingStart="8dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="8dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="8dp"
+        android:text="saved"
+        android:textAllCaps="true"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:cornerRadius="12dp"
+        app:icon="@drawable/unsaved"
+        app:iconGravity="textEnd"
+        app:iconPadding="2dp"
+        app:iconTint="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/queryText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/queryText" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/savedBtn"
+        app:layout_constraintStart_toStartOf="@+id/queryText"
+        app:layout_constraintTop_toBottomOf="@+id/queryText">
+
+        <RadioButton
+            android:id="@+id/mostReviewsBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_weight="1"
+            android:background="@drawable/radio_left"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="@string/most_reviews"
+            android:textAlignment="center"
+            android:textColor="@color/button_text_color"
+            android:textSize="13sp" />
+
+        <RadioButton
+            android:id="@+id/bestOverallBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/radio_middle"
+            android:button="@null"
+            android:checked="false"
+            android:gravity="center"
+            android:text="@string/best_overall"
+            android:textAlignment="center"
+            android:textColor="@color/button_text_color"
+            android:textSize="13sp" />
+
+        <RadioButton
+            android:id="@+id/highestRatedBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_weight="1"
+            android:background="@drawable/radio_right"
+            android:button="@null"
+            android:checked="false"
+            android:gravity="center"
+            android:text="@string/highest_rated"
+            android:textAlignment="center"
+            android:textColor="@color/button_text_color"
+            android:textSize="13sp" />
+    </RadioGroup>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/resultsRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/radioGroup"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="@+id/resultsRecyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/noPlaceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="No Places Found"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/resultsRecyclerView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

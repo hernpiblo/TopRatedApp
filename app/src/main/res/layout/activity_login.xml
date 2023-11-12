@@ -60,7 +60,7 @@
         android:id="@+id/loginBtn"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:enabled="false"
+        android:enabled="true"
         android:text="@string/login"
         android:textAllCaps="true"
         android:textColor="@color/button_text_color"

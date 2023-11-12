@@ -7,4 +7,7 @@
     <color name="colorSecondary">#0A014F</color>
     <color name="colorAccent">#FFEEDD</color>
     <color name="colorError">#FF6363</color>
+    <color name="radioLeft">#ED7782</color>
+    <color name="radioMiddle">#FFD864</color>
+    <color name="radioRight">#9EE493</color>
 </resources>

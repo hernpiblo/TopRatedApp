@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <TextView
+        android:id="@+id/staticText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="60dp"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:text="@string/search_location_to_obtain_places"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:ems="10"
+        android:hint="@string/e_g_new_york_city"
+        android:inputType="text"
+        app:layout_constraintEnd_toStartOf="@+id/searchBtn"
+        app:layout_constraintStart_toStartOf="@+id/staticText2"
+        app:layout_constraintTop_toBottomOf="@+id/staticText2"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/searchBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginEnd="28dp"
+        android:enabled="false"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="@string/search"
+        android:textColor="@color/button_text_color"
+        app:cornerRadius="10dp"
+        app:icon="@drawable/search"
+        app:iconGravity="textEnd"
+        app:iconPadding="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/searchEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/searchEditText" />
+
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/searchBtn"
+        app:layout_constraintStart_toStartOf="@+id/searchEditText"
+        app:layout_constraintTop_toBottomOf="@+id/searchEditText">
+
+        <RadioButton
+            android:id="@+id/mostReviewsBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_weight="1"
+            android:background="@drawable/radio_left"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="@string/most_reviews"
+            android:textAlignment="center"
+            android:textColor="@color/button_text_color"
+            android:textSize="13sp" />
+
+        <RadioButton
+            android:id="@+id/bestOverallBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/radio_middle"
+            android:button="@null"
+            android:checked="false"
+            android:gravity="center"
+            android:text="@string/best_overall"
+            android:textAlignment="center"
+            android:textColor="@color/button_text_color"
+            android:textSize="13sp" />
+
+        <RadioButton
+            android:id="@+id/highestRatedBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_weight="1"
+            android:background="@drawable/radio_right"
+            android:button="@null"
+            android:checked="false"
+            android:gravity="center"
+            android:text="@string/highest_rated"
+            android:textAlignment="center"
+            android:textColor="@color/button_text_color"
+            android:textSize="13sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/savedPlacedBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/colorAccent"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="@string/my_saved_places"
+        android:textColor="@color/colorPrimary"
+        app:cornerRadius="10dp"
+        app:icon="@drawable/unsaved"
+        app:iconGravity="textEnd"
+        app:iconTint="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="@+id/radioGroup"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

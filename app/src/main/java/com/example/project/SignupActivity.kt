@@ -18,7 +18,7 @@ import androidx.core.view.isVisible
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.userProfileChangeRequest
 
-private const val LOG_TAG = "SIGNUP PAGE"
+private const val LOG_TAG = "_SIGNUP PAGE"
 private const val LOG_TAG_FB = "$LOG_TAG FIREBASE"
 
 class SignupActivity : AppCompatActivity() {

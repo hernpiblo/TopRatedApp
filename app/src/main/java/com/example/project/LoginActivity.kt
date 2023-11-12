@@ -13,7 +13,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.google.firebase.auth.FirebaseAuth
 
-private const val LOG_TAG = "LOGIN PAGE"
+private const val LOG_TAG = "_LOGIN PAGE"
 private const val LOG_TAG_FB = "$LOG_TAG FIREBASE"
 
 class LoginActivity : AppCompatActivity() {
@@ -36,7 +36,7 @@ class LoginActivity : AppCompatActivity() {
         loginBtn = findViewById(R.id.loginBtn)
         signupBtn = findViewById(R.id.signupBtn)
         firebaseAuth = FirebaseAuth.getInstance()
-        val sharedPrefs = getSharedPreferences("MainActivity", MODE_PRIVATE)
+        val sharedPrefs = getSharedPreferences("LoginActivity", MODE_PRIVATE)
 
         // Email Input
         emailInput.addTextChangedListener(textWatcher)
@@ -83,7 +83,7 @@ class LoginActivity : AppCompatActivity() {
                         val user = firebaseAuth.currentUser
                         Toast.makeText(this, "Login success : ${user!!.displayName}", Toast.LENGTH_LONG).show()
 
-//                        startActivity(Intent(this@LoginActivity, HomeActivity::class.java))
+                        startActivity(Intent(this@LoginActivity, HomeActivity::class.java))
                     } else {
                         val exception = it.exception
                         AlertDialog.Builder(this)
@@ -98,9 +98,11 @@ class LoginActivity : AppCompatActivity() {
 
         // Signup Button
         signupBtn.setOnClickListener {
-            Log.d(LOG_TAG, "signupBtn clicked")
-            val signupActivity = Intent(this@LoginActivity, SignupActivity::class.java)
-            startActivity(signupActivity)
+            startActivity(Intent(this@LoginActivity, HomeActivity::class.java))
+
+//            Log.d(LOG_TAG, "signupBtn clicked")
+//            val signupActivity = Intent(this@LoginActivity, SignupActivity::class.java)
+//            startActivity(signupActivity)
         }
     }
 
