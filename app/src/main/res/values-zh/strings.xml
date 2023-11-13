@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">项目</string>
+    <string name="top_rated">最高评分</string>
+    <string name="email">电子邮件</string>
+    <string name="login">登录</string>
+    <string name="password">密码</string>
+    <string name="remember_me">记住我</string>
+    <string name="don_t_have_an_account">还没有帐户？</string>
+    <string name="create_account">创建帐户</string>
+    <string name="confirm_password">确认密码</string>
+    <string name="name">姓名</string>
+    <string name="create_your_account">创建您的帐户</string>
+    <string name="password_mismatch">密码不匹配</string>
+    <string name="back_button">返回</string>
+    <string name="error_icon">错误图标</string>
+    <string name="best_overall">最佳整体</string>
+    <string name="highest_rated">评分最高</string>
+    <string name="most_reviews">评论最多</string>
+    <string name="my_saved_places">我的保存的地方</string>
+    <string name="search">搜索</string>
+    <string name="e_g_new_york_city">例如. 纽约市</string>
+    <string name="search_location_to_obtain_places">搜索位置以获取地点</string>
+    <string name="no_name">无名称</string>
+    <string name="no_address">无地址</string>
+    <string name="image_of_place">地方的图像</string>
+    <string name="time">时间</string>
+    <string name="saved_places">已保存的地方</string>
+    <string name="no_places_found">未找到地方</string>
+    <string name="saved">已保存</string>
+    <string name="places_in">地点在</string>
+    <string name="rating">评分：      </string>
+    <string name="reviews">评论数：  </string>
+    <string name="score">得分：        </string>
+    <string name="login_success">登录成功： </string>
+</resources>

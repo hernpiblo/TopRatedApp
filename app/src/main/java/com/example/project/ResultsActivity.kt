@@ -1,5 +1,6 @@
 package com.example.project
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -11,6 +12,7 @@ import android.widget.TextView
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -29,6 +31,7 @@ class ResultsActivity : AppCompatActivity() {
     private lateinit var resultsRecyclerView : RecyclerView
     private lateinit var progressBar : ProgressBar
     private lateinit var noPlaceFoundText : TextView
+    private lateinit var firebaseDb : FirebaseDatabase
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,10 +47,16 @@ class ResultsActivity : AppCompatActivity() {
         progressBar = findViewById(R.id.progressBar)
         noPlaceFoundText = findViewById(R.id.noPlaceText)
         radioGroup = findViewById(R.id.radioGroup)
+        firebaseDb = FirebaseDatabase.getInstance()
 
         // TextView
         val query = intent.getStringExtra("QUERY").toString()
         searchTermTextView.text = query
+
+        // Saved Places Button
+        savedPlacesBtn.setOnClickListener {
+            startActivity(Intent(this@ResultsActivity, SavedActivity::class.java))
+        }
 
         // Radio
         val queryType = intent.getIntExtra("RADIO", 1)
@@ -72,7 +81,7 @@ class ResultsActivity : AppCompatActivity() {
                     noPlaceFoundText.isVisible = true
                 } else {
                     // RecyclerView
-                    resultsRecyclerView.adapter = PlacesAdapter(this@ResultsActivity, places)
+                    resultsRecyclerView.adapter = PlacesAdapter(this@ResultsActivity, places, firebaseDb.getReference("Places"))
                     resultsRecyclerView.layoutManager = LinearLayoutManager(this@ResultsActivity)
                 }
                 progressBar.isVisible = false
@@ -86,7 +95,11 @@ class ResultsActivity : AppCompatActivity() {
 
     private fun updateRecyclerView(places : MutableList<Place>, queryType : Int) {
         val newPlaces = ApiManager(this@ResultsActivity).sortPlaces(places, queryType)
-        resultsRecyclerView.adapter = PlacesAdapter(this@ResultsActivity, newPlaces)
+        resultsRecyclerView.adapter = PlacesAdapter(
+            this@ResultsActivity,
+            newPlaces,
+            firebaseDb.getReference("Places")
+        )
         resultsRecyclerView.layoutManager = LinearLayoutManager(this@ResultsActivity)
     }
 

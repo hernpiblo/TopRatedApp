@@ -81,7 +81,7 @@ class LoginActivity : AppCompatActivity() {
                             sharedPrefs.edit().putBoolean("REMEMBERME", false).apply()
                         }
                         val user = firebaseAuth.currentUser
-                        Toast.makeText(this, "Login success : ${user!!.displayName}", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this, "${getString(R.string.login_success)}${user!!.displayName}", Toast.LENGTH_LONG).show()
 
                         startActivity(Intent(this@LoginActivity, HomeActivity::class.java))
                     } else {
@@ -98,11 +98,9 @@ class LoginActivity : AppCompatActivity() {
 
         // Signup Button
         signupBtn.setOnClickListener {
-            startActivity(Intent(this@LoginActivity, HomeActivity::class.java))
-
-//            Log.d(LOG_TAG, "signupBtn clicked")
-//            val signupActivity = Intent(this@LoginActivity, SignupActivity::class.java)
-//            startActivity(signupActivity)
+            Log.d(LOG_TAG, "signupBtn clicked")
+            val signupActivity = Intent(this@LoginActivity, SignupActivity::class.java)
+            startActivity(signupActivity)
         }
     }
 

@@ -23,4 +23,13 @@
     <string name="no_name">No Name</string>
     <string name="no_address">No Address</string>
     <string name="image_of_place">Image of place</string>
+    <string name="time">Time</string>
+    <string name="saved_places">saved places</string>
+    <string name="no_places_found">No Places Found</string>
+    <string name="saved">saved</string>
+    <string name="places_in">Places in</string>
+    <string name="rating">Rating:      </string>
+    <string name="reviews">Reviews:  </string>
+    <string name="score">Score:        </string>
+    <string name="login_success">Login success : </string>
 </resources>

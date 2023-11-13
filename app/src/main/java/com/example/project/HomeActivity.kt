@@ -20,7 +20,6 @@ class HomeActivity : AppCompatActivity() {
     private lateinit var highestRatedBtn: RadioButton
     private lateinit var savedPlacesBtn: Button
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
@@ -56,7 +55,7 @@ class HomeActivity : AppCompatActivity() {
         }
 
         savedPlacesBtn.setOnClickListener {
-//            startActivity(Intent(this@HomeActivity, SavedPlacesActivity::class.java))
+            startActivity(Intent(this@HomeActivity, SavedActivity::class.java))
         }
     }
 

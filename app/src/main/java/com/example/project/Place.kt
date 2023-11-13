@@ -8,5 +8,6 @@ data class Place(
     val score : Int,
     val imageName : String,
     val address : String,
-    val gMapsUrl : String
+    val gMapsUrl : String,
+    val timestamp: Long?
 )

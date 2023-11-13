@@ -83,7 +83,7 @@ class ApiManager(appContext : Context) {
                 val address  = currentPlaceJson.getString("formattedAddress")
                 val gMapsUrl = currentPlaceJson.getString("googleMapsUri")
 
-                val currentPlace = Place(name, id, rating, reviewsCount, score, imageName, address, gMapsUrl)
+                val currentPlace = Place(name, id, rating, reviewsCount, score, imageName, address, gMapsUrl, null)
 
                 if (currentIds.add(id)) {
                     places.add(currentPlace)
@@ -152,7 +152,7 @@ class ApiManager(appContext : Context) {
                 val address  = currentPlaceLocJson.getString("formattedAddress")
                 val gMapsUrl = currentPlaceLocJson.getString("googleMapsUri")
 
-                val currentPlaceLoc = Place(name, id, rating, reviewsCount, score, imageName, address, gMapsUrl)
+                val currentPlaceLoc = Place(name, id, rating, reviewsCount, score, imageName, address, gMapsUrl, null)
 
                 if (currentIds.add(id)) {
                     places.add(currentPlaceLoc)
