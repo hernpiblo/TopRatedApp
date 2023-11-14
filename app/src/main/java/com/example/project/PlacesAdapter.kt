@@ -60,9 +60,9 @@ class PlacesAdapter(
         holder.placeIndex.text = (position + 1).toString()
         holder.placeName.text = currentPlace.name
         holder.placeAddress.text = currentPlace.address
-        holder.placeRating.text = "${appContext.getString(R.string.rating)}${currentPlace.rating}"
-        holder.placeReviewsCount.text = "${appContext.getString(R.string.reviews)}${currentPlace.reviewsCount}"
-        holder.placeScore.text = "${appContext.getString(R.string.score)}${currentPlace.score}"
+        holder.placeRating.text = "${appContext.getString(R.string.rating)}      ${currentPlace.rating}"
+        holder.placeReviewsCount.text = "${appContext.getString(R.string.reviews)}  ${currentPlace.reviewsCount}"
+        holder.placeScore.text = "${appContext.getString(R.string.score)}        ${currentPlace.score}"
 
         // Image
         if (currentPlace.imageName.isNotEmpty()) {
